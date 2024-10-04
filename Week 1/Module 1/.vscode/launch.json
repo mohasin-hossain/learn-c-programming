@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mohasin/Desktop/Phitron/Week 1/Module 1",
+      "program": "/Users/mohasin/Desktop/Phitron/Week 1/Module 1/build/Debug/outDebug"
+    }
+  ]
+}
