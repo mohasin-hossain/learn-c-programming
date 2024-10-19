@@ -1,5 +1,4 @@
 
-// Lowest number
 #include<stdio.h>
 
 int main()
@@ -8,19 +7,19 @@ int main()
     scanf("%d", &n);
 
     int arr[n];
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    int lowestNum = arr[0], numPosition = 1;
-    for (int i = 0; i < n; i++) {
-        if(arr[i] < lowestNum) {
-            lowestNum = arr[i];
-            numPosition = i + 1;
-        }
+    int reversedArr[n];
+    for(int i = n-1; i >= 0; i--) {
+        reversedArr[i - (n-i)] = arr[i];
     }
 
-    printf("%d %d\n", lowestNum, numPosition);
+       for(int i = 0; i < n; i++) {
+        printf("%d", arr[i]);
+    }
 
     return 0;
+
 }
