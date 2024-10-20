@@ -1,38 +1,28 @@
-
 #include<stdio.h>
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
+    int n, m;
 
-    int k = 1;
-    for(int i = 1; i <= n; i++, k += 2) {
-        
-        int space = n - i;
-        while(space--) {
-            printf(" ");
+    while(scanf("%d %d", &n, &m) !=EOF) {
+
+        if(n > m) {
+            int temp = n;
+            n = m;
+            m = temp;
         }
 
-        for(int j = 1; j <= k; j++) {
-            printf("*");
-        }
-        printf("\n");
-    }
-
-    k -= 2;
-
-    for(int i = n; i >= 1; i--, k -= 2) {
-        
-        int space = n - i;
-        while(space--) {
-            printf(" ");
+        if(n <= 0 || m <= 0) {
+            break;
         }
 
-        for(int j = 1; j <= k; j++) {
-            printf("*");
+        int sum = 0;
+        for(int i = n; i <= m; i++) {
+            printf("%d ", i);
+            sum += i;
         }
-        printf("\n");
+
+        printf("sum =%d\n", sum);
     }
 
     return 0;
